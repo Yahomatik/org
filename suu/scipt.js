@@ -24,7 +24,7 @@ var countdown = function() {
       alert("انتهت اللعبة!");
       newGame();
     }
-  }, 1000);
+  }, 500);
 };
 
 
@@ -49,14 +49,14 @@ var newGame = function() {
     answers[i].innerHTML = "";
   }
   button.disabled = false;
-  alert("عدد نقاطك هو: " + counter);
+  alert("  topladığım puan sayısı: " + counter);
   if (counter > bestScore) {
     bestScore = counter;
-    bestScoreDisplay.innerHTML = "أفضل نتيجة: " + bestScore; // تحديث عرض البست سكور
+    bestScoreDisplay.innerHTML = "en iyi puan: " + bestScore; // تحديث عرض البست سكور
     sessionStorage.setItem('bestScore', bestScore);
   }
   remaining.style.width = "100%";
-  score.innerHTML = "النقاط: 0";
+  score.innerHTML = "puan: 0";
   counter = 0;
 }
 
@@ -66,10 +66,10 @@ var click = function(e) {
       answers[i].innerHTML = "";
     }
     counter++;
-    score.innerHTML = "النقاط: " + counter;
+    score.innerHTML = "puan: " + counter;
     generateNumber();
   } else {
-    alert("لقد خسرت!");
+    alert(" kaybet ettin!");
     newGame();
   }
 };
