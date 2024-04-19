@@ -21,7 +21,7 @@ var countdown = function() {
     remaining.style.width = increment + "%";
     increment -= 1;
     if (remaining.style.width === "0%") {
-      alert("انتهت اللعبة!");
+      alert(" süre bitti!");
       newGame();
     }
   }, 500);
